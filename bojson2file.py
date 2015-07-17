@@ -71,6 +71,11 @@ if __name__ == "__main__":
 
 
 	elif file_type == 'XLSX':
+		#print (file_name)
+		if file_name == "STDOUT":
+			print("please assign a file name")
+			sys.exit(1)
+
 		result_table = [];
 		for jsonobj in data:
 			data_part = json.loads(jsonobj)
