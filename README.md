@@ -1,5 +1,10 @@
-# dumpRes
+# dumpRes 
 python codes and a shell script to dump bigobject data by a query statement
+
+##system requirement
+Python 2.7.6
+Packages : requests, openpyxl
+    pip install requests, openpyxl
 
 ## how to use
 
@@ -15,3 +20,5 @@ You can use the CSV dump type without a dump file name, the result will be print
     sh dumpRes.sh localhost 9090 "select * from sales limit 10" CSV
 
 Note that, admin statements such as "show tables", "desc sales", and so on will not be stored into a file. 
+
+
