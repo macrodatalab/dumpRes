@@ -4,6 +4,7 @@ python codes and a shell script to dump bigobject data by a query statement
 ##System requirements
 Python 2.7.6
 Packages : requests, openpyxl
+
     pip install requests, openpyxl
 
 ## how to use
