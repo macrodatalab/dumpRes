@@ -8,7 +8,7 @@ Packages : requests, openpyxl
 
     pip install requests, openpyxl
 
-## how to use
+## How to use
 
     dumpRes <bo host> <po port> <statement> <dump type> <dump file>
   
