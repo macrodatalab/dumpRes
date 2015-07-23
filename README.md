@@ -6,7 +6,7 @@ Python 2.7.6
 
 Packages : requests, openpyxl
 
-    pip install requests, openpyxl
+    pip install requests openpyxl
 
 ## How to use
 
