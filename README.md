@@ -26,7 +26,7 @@ For example, when a bigobject run on localhost:9090, you can dump the "sales" ta
 You can use the CSV dump type without a dump file name, the result will be printed directly.
 
     sh dumpRes.sh localhost 9090 "select * from sales limit 10" CSV
-    sh dumplocres "select * from sales limit 10" CSV
+    sh dumplocres.sh "select * from sales limit 10" CSV
 
 Note that, admin statements such as "show tables", "desc sales", and so on will not be stored into a file. 
 
