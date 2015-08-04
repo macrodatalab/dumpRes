@@ -19,11 +19,11 @@ else
    file_name=$3
 fi
 
-echo "run the script : python borestful.py \"$bo_url\" \"$1\" | python bojson2file.py $2 $file_name"
+echo "run the script : python dumpRes/borestful.py \"$bo_url\" \"$1\" | python dumpRes/bojson2file.py $2 $file_name"
 
 date1=$(date +"%s")
 
-python borestful.py "$bo_url" "$1" | python bojson2file.py $2 $file_name
+python dumpRes/borestful.py "$bo_url" "$1" | python dumpRes/bojson2file.py $2 $file_name
 
 date2=$(date +"%s")
 diff=$(($date2-$date1))
