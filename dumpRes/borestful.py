@@ -2,11 +2,11 @@ import requests
 import json
 import sys
 
-def cmd2JSON(cmd):
-	return json.dumps({'Stmt':cmd,'Workspace':"",'Opts':{}})
+def cmd2JSON(cmd,workspace):
+	return json.dumps({'Stmt':cmd,'Workspace':workspace,'Opts':{}})
 
-def getData(server,cmdStr):
-	r = requests.post(server,data=cmd2JSON(cmdStr) , stream=True)
+def getData(server,cmdStr,workspace):
+	r = requests.post(server,data=cmd2JSON(cmdStr,workspace) , stream=True)
 	for content in json_stream(r.raw):
 		#print(content)
 		print (json.dumps(content))
@@ -21,4 +21,7 @@ def json_stream(fp):
 if __name__ == "__main__":
 	server = sys.argv[1]
 	cmd = sys.argv[2]
-	getData(server,cmd)
+	workspace = ""
+	if len(sys.argv) > 3:
+		workspace = sys.argv[3]
+	getData(server,cmd,workspace)
